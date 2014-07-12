@@ -22,7 +22,8 @@ public class GameControl : MonoBehaviour {
 		timeLeft -= Time.deltaTime;
 		if (timeLeft <= 0.0f)
 		{
-			print ("Game Over");
+			PlayerPrefs.SetInt ("score", powerupsCollected);
+			Application.LoadLevel (2);
 		}
 	}
 
